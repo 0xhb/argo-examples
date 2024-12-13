@@ -14,6 +14,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```
 k get services -n argocd
 kubectl port-forward service/argocd-server -n argocd 8080:443
+
 ```
 
 ### Get Credentials
@@ -21,7 +22,7 @@ kubectl port-forward service/argocd-server -n argocd 8080:443
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-# Install ArgoCD CLI / Login via CLI
+# Install ArgoCD CLI / Login via CLI helleo
 ```
 brew install argocd
 kubectl port-forward svc/argocd-server -n argocd 8080:443
